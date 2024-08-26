@@ -27,7 +27,7 @@
       <button type="submit" [disabled]="LoginForm.invalid">Login</button>
       
       <div class="links">
-        <a href="/forgot-password">Forgot Password?</a>
+        <a  [routerLink]="['/forget-password']">Forgot Password?</a>
         <p>Don't have an account? <a [routerLink]="['/register']">Register</a></p>
         <button class="btn-s"  (click)="bookSeat()">Book a Seat</button>
       </div>
