@@ -83,3 +83,13 @@
     text-decoration: underline;
   }
   
+  .btn-s{
+    background-color: #50b748;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }

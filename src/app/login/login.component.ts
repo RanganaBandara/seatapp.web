@@ -37,4 +37,7 @@ export class LoginComponent {
   navigateToRegister() {
     this.router.navigate(['/register']);
   }
+  bookSeat(){
+    this.router.navigate(['/seat-res']);
+  }
 }

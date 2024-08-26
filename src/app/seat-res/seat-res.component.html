@@ -1,0 +1,32 @@
+<div class="seat-container">
+    <div
+      *ngFor="let seat of seats"
+      [ngClass]="{
+        'seat': true,
+        'reserved': seat.status === 'reserved',
+        'normal': seat.status === 'normal',
+        'selected': seat.status === 'selected'
+      }"
+      (click)="selectSeat(seat)"
+      [attr.aria-label]="'Seat number ' + seat.number + ' is ' + seat.status"
+    >
+      {{ seat.number }}
+    </div>
+  </div>
+  
+  <div class="reservation-form">
+    <label for="reserverName">Reserved By:</label>
+    <input
+      id="reserverName"
+      type="text"
+      placeholder="Enter your name"
+      [(ngModel)]="reserverName"
+      required
+    />
+  </div>
+  
+  <div class="controls">
+    <button (click)="reserveSeats()">Reserve Selected Seats</button>
+    <button (click)="resetSeats()">Reset Seats</button>
+  </div>
+  
