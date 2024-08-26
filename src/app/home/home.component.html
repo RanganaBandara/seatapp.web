@@ -1,0 +1,56 @@
+
+<div class="container">
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img src="logobrand.jpg" alt="Movie Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/movies">Movies</a></li>
+          <li><a routerLink="/about">About</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+          <li><a routerLink="/login" class="login-button">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to CinemaCharm SL</h1>
+        <p>Book Seats for your favorite movies easily!</p>
+        <button class="cta-button" [routerLink]="['/seat-res']" >Book Now </button>
+        <!--button class="btn-s"  (click)="bookSeat()">Book a Seat</button-->
+      </div>
+    </section>
+  
+    <!-- Movies Section -->
+    <section class="movies">
+      <h2>NOW SHOWING</h2>
+      <div class="movie-list">
+        <div class="movie-item">
+          <img src="poster1.jpg" alt="Deadpool & Wolverine">
+          <h3>Deadpool & Wolverine</h3>
+          <button>Book Seat</button>
+        </div>
+        <div class="movie-item">
+          <img src="poster2.jpg" alt="It Ends With Us">
+          <h3>It Ends With Us</h3>
+          <button>Book Seat</button>
+        </div>
+        <div class="movie-item">
+          <img src="poster3.jpg" alt="Movie 3">
+          <h3>Thangalaan</h3>
+          <button>Book Seat</button>
+        </div>
+        <!-- Add more movie items as needed -->
+      </div>
+    </section>
+  
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Movie Seat Booking. All rights reserved.</p>
+    </footer>
+  </div>

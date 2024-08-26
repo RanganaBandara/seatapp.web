@@ -93,3 +93,38 @@
     cursor: pointer;
     transition: background-color 0.3s;
   }
+
+  /* Header styling */
+header {
+  background-color: #0056a2;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-button {
+  background-color: #50b748;
+  padding: 5px 10px;
+  /*border-radius: 4px;*/
+}
