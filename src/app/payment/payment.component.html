@@ -1,0 +1,48 @@
+<!-- Dashboard Section -->
+<div class="dashboard-container">
+    <button class="dashboard-btn">Home</button>
+    <button class="dashboard-btn">Seat Reservation Page</button>
+    <button class="dashboard-btn">Log Out</button>
+  </div>
+  
+  <!-- Payment Summary Container -->
+  <div class="payment-summary-container">
+    <!-- Payment Section -->
+    <div class="payment-section">
+      <h2>Select Payment Method</h2>
+      <div class="paypal-details">
+        <label for="paypal-email">PayPal Email:</label>
+        <input id="paypal-email" type="email" placeholder="Enter PayPal Email">
+        
+        <label for="paypal-name">Name on PayPal:</label>
+        <input id="paypal-name" type="text" placeholder="Enter Name">
+  
+        <label for="paypal-amount">Amount:</label>
+        <input id="paypal-amount" type="number" placeholder="Enter Amount">
+  
+        <button class="pay-btn">Pay Now</button>
+      </div>
+    </div>
+  
+    <!-- Order Summary Section -->
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <div class="order-details">
+        <img src="app/assets/inception-poster.png" alt="Movie Poster">
+        <div class="order-info">
+          <p>Movie Name: <strong>Inception</strong></p>
+          <p>Seats: <strong>A1, A2, A3</strong></p>
+          <h3>Total: $45.00</h3>
+        </div>
+      </div>
+      <ul>
+        <li>Show Time: <span>7:30 PM</span></li>
+        <li>Date: <span>26 Aug 2024</span></li>
+        <li>Theater: <span>CINEMACHARM SL, Screen 2</span></li>
+        <li>Subtotal: <span>$45.00</span></li>
+        <li>Discount: <span>5%</span></li>
+        <li>Total: <span class="total">$42.75</span></li>
+      </ul>
+    </div>
+  </div>
+  

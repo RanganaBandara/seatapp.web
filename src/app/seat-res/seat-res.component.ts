@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; 
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,11 +15,13 @@ export class SeatResComponent {
 
   seats = Array.from({ length: 100 }, (_, i) => ({
     number: i + 1,
-    status: 'normal', 
-    reservedBy: '' 
+    status: 'normal',
+    reservedBy: ''
   }));
 
-  reserverName = ''; 
+  reserverName = '';
+
+  constructor(private router: Router) {}
 
   selectSeat(seat: any): void {
     if (seat.status === 'reserved') return;
@@ -28,21 +30,23 @@ export class SeatResComponent {
   }
 
   reserveSeats(): void {
-    if (!this.reserverName.trim()) {
-      alert('Please enter a valid name.');
+    if (!this.reserverName.trim() || !this.seats.some(seat => seat.status === 'selected')) {
+      alert('Please enter a valid name and select at least one seat.');
       return;
     }
 
     this.seats.forEach(seat => {
       if (seat.status === 'selected') {
         seat.status = 'reserved';
-        seat.reservedBy = this.reserverName; 
+        seat.reservedBy = this.reserverName;
       }
     });
 
-    
     this.resetSeats();
     this.reserverName = '';
+
+    // Navigate to the payment component
+    this.router.navigate(['/payment']);
   }
 
   resetSeats(): void {
